@@ -13,7 +13,8 @@ const ACTIONS_RUTA_FAV = {
 
 export default function BottomOptions ({ navigation, infoBuseta, markedFocused, principalColors }) {
   const { paradasRuta } = infoBuseta
-  const [coordinatesParada, setCoordinatesParada] = useState(paradasRuta[0].coordinates)
+  const [imgsParada, setImgsParada] = useState(paradasRuta[0].imgsParada)
+  const [nameParada, setNameParada] = useState('')
   const stateUserLoggedIn = useSelector((state) => state.userLoggedIn.userInfo)
   const [isRutaFav, setIsRutaFav] = useState(false)
   const [showAlert, setShowAlert] = useState(false)
@@ -25,7 +26,6 @@ export default function BottomOptions ({ navigation, infoBuseta, markedFocused, 
   }
 
   const handleNewRutaFav = () => {
-    console.log(stateUserLoggedIn)
     if (!isRutaFav) {
       dispatch(changeUserRutasFav({
         users,
@@ -51,13 +51,17 @@ export default function BottomOptions ({ navigation, infoBuseta, markedFocused, 
 
   useEffect(() => {
     paradasRuta.forEach((parada) => {
-      const { numParada, coordinates } = parada
-      if (markedFocused === numParada) setCoordinatesParada(coordinates)
+      const { numParada, imgsParada, nameParada } = parada
+      if (markedFocused === numParada) {
+        setNameParada(nameParada)
+        setImgsParada(imgsParada)
+      }
     })
   }, [markedFocused])
 
   useEffect(() => {
     const { rutasFav } = stateUserLoggedIn
+
     rutasFav.forEach((ruta) => {
       if (ruta.nameRuta === infoBuseta.nameRuta) setIsRutaFav(true)
     })
@@ -101,21 +105,27 @@ export default function BottomOptions ({ navigation, infoBuseta, markedFocused, 
             </TouchableOpacity>
           </View>
         </View>
-        <View style={styles.bottomOptionSend}>
-          <TouchableOpacity
-            onPress={() =>
-              navigation.navigate('PreviewImageParada',
-                { infoBuseta, coordinatesParada, principalColors })}
-          >
-            <MaterialCommunityIcons
-              name='tooltip-image'
-              style={{
-                ...styles.iconOptionBottomSend,
-                color: principalColors.primaryColor
-              }}
-            />
-          </TouchableOpacity>
-        </View>
+        {
+          imgsParada.length !== 0
+            ? (
+              <View style={styles.bottomOptionSend}>
+                <TouchableOpacity
+                  onPress={() =>
+                    navigation.navigate('PreviewImageParada',
+                      { infoBuseta, imgsParada, nameParada, principalColors })}
+                >
+                  <MaterialCommunityIcons
+                    name='tooltip-image'
+                    style={{
+                      ...styles.iconOptionBottomSend,
+                      color: principalColors.primaryColor
+                    }}
+                  />
+                </TouchableOpacity>
+              </View>
+              )
+            : null
+        }
       </View>
     </>
   )
