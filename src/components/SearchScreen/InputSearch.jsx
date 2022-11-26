@@ -2,6 +2,7 @@ import React from 'react'
 import { StyleSheet, View, TextInput, TouchableOpacity } from 'react-native'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 
+/* ➡ Componente que se encarga de renderizar el input que se encuentra en la imagen de la ciudad en el stack de buscar dirección y agregar direcciones favoritas. */
 export default function InputSearch ({ navigation }) {
   return (
     <TouchableOpacity

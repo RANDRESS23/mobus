@@ -2,6 +2,7 @@ import React from 'react'
 import { StyleSheet, View, Image } from 'react-native'
 import imgCiudad from '../../../assets/img/img_ciudad.jpg'
 
+/* ➡ Componente que se encarga de renderizar la imagen de la ciudad que se encuentra en el stack de buscar dirección y agregar direcciones favoritas. */
 export default function ImageBackgroundSearch () {
   return (
     <View style={styles.searchImageContainer}>

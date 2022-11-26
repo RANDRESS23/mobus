@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, ScrollView, TouchableOpacity } from 'react-nati
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 import AlertSimple from '../LoginUser/AlertSimple'
 
+/* ➡ Componente que se encarga de renderizar las paradas con las que cuenta cada ruta en el stack de la información de cada buseta. */
 export default function ParadasBuseta (
   { infoBuseta, navigation, setMarkedFocused, markedFocused, principalColors }) {
   const { paradasRuta } = infoBuseta

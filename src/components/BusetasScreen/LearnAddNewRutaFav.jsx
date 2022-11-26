@@ -2,6 +2,7 @@ import React from 'react'
 import { StyleSheet, ScrollView, Text, View, TouchableOpacity } from 'react-native'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 
+/* ➡ Componente que se encarga de renderizar el mensaje y el botón que le enseñará al usuario como agregar una ruta que seleccione al apartado de "rutas favoritas". */
 export default function LearnAddNewRutaFav ({ handleShowAlert }) {
   return (
     <ScrollView>

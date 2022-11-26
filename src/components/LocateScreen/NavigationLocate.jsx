@@ -7,6 +7,7 @@ import ParadasFavoritas from './ParadasFavoritas'
 
 const Tab = createMaterialTopTabNavigator()
 
+/* ➡ Componente que se encarga de administar la navegación entre el apartado de "paradas cercanas" y el apartado "paradas favoritas" de la sección de ubicación. */
 export default function NavigationLocate () {
   return (
     <Tab.Navigator>

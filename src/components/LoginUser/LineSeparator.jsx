@@ -2,6 +2,7 @@ import React from 'react'
 import { StyleSheet, View } from 'react-native'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 
+/* ➡ Componente que se encarga de renderizar la linea de separación entre el botón de inciar sesión y el botón que redirije al formulario de registro. */
 export default function LineSeparator () {
   return (
     <View style={styles.lineContainer}>

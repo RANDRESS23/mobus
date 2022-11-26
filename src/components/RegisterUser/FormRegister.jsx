@@ -7,6 +7,7 @@ import ButtonsLogin from '../LoginUser/ButtonsLogin'
 import FieldForm from '../LoginUser/FieldForm'
 import AlertSimple from '../LoginUser/AlertSimple'
 
+/* ➡ Componente que se encarga de renderizar el formulario de registro de la aplicación. */
 export default function FormRegister ({ navigation }) {
   const [showAlert, setShowAlert] = useState(false)
   const { control, handleSubmit, formState: { errors }, reset } = useForm({

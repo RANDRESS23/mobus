@@ -9,6 +9,7 @@ import FieldForm from './FieldForm'
 import * as yup from 'yup'
 import AlertSimple from './AlertSimple'
 
+/* ➡ Componente que se encarga de renderizar el formulario de login de la aplicación. */
 export default function FormLogin ({ navigation }) {
   const [showAlert, setShowAlert] = useState(false)
   const [showAlert2, setShowAlert2] = useState(false)

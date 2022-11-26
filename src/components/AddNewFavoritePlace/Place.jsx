@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 import AlertSimple from '../LoginUser/AlertSimple'
 
+/* ➡ Componente que se encarga de renderizar cada lugar que coincide con la busqueda del usuario. */
 export default function Place ({ nameAddress, county, region }) {
   const [showAlert, setShowAlert] = useState(false)
 

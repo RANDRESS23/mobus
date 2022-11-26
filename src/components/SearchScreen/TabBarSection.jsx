@@ -1,6 +1,7 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
+/* ➡ Componente que se encarga de renderizar la tabBar de las secciones que se encuentran en el stack de buscar dirección y agregar direcciones favoritas. */
 export default function TabBarSection ({ navigation }) {
   return (
     <View style={styles.tabBarSectionsContainer}>

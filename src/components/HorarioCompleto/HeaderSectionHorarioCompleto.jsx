@@ -2,6 +2,7 @@ import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 
+/* ➡ Componente que se encarga de renderizar el header del apartado del horario completo de cada ruta. */
 export default function HeaderSectionHorarioCompleto ({ nameParada }) {
   return (
     <View style={styles.nameParadaContainer}>

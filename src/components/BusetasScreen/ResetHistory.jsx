@@ -1,6 +1,7 @@
 import React from 'react'
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 
+/* ➡ Componente que se encarga de renderizar el botón que realizará la función de reiniciar el historial de las busetas en las que ha inspeccionado el usuario. */
 export default function ResetHistory ({ setRutasRecents, setRutaSelected, setIsViewResetHistory }) {
   return (
     <View style={styles.buttonResetHistoryContainer}>

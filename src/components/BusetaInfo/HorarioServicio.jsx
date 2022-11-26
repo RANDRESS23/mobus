@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import AlertSimple from '../LoginUser/AlertSimple'
 
+/* ➡ Componente que se encarga de renderizar el horario de servicio de su respectiva ruta en el stack de la información de cada buseta. */
 export default function HorarioServicio ({ infoBuseta }) {
   const { horarioServicio, nameRuta } = infoBuseta
   const [nameRutaFocus, setNameRutaFocus] = useState('')

@@ -11,6 +11,7 @@ const ACTIONS_RUTA_FAV = {
   DELETE_RUTA_FAV: 'DeleteFavRuta'
 }
 
+/* ➡ Componente que se encarga de renderizar los botones de la parte inferior del stack de la información de cada buseta. */
 export default function BottomOptions ({ navigation, infoBuseta, markedFocused, principalColors }) {
   const { paradasRuta } = infoBuseta
   const [imgsParada, setImgsParada] = useState(paradasRuta[0].imgsParada)

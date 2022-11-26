@@ -4,6 +4,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 import AlertSimple from '../LoginUser/AlertSimple'
 
+/* ➡ Componente que se encarga de renderizar el apartado de paradas favoritas en una de las tres principales secciones que es la de ubicación. */
 export default function ParadasFavoritas () {
   const [showAlert, setShowAlert] = useState(false)
 

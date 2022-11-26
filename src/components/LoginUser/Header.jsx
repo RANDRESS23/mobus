@@ -3,6 +3,7 @@ import { StyleSheet, View, Text, ImageBackground, Image } from 'react-native'
 import logoMobus from '../../../assets/img/logoMobus.png'
 import { Ionicons } from '@expo/vector-icons'
 
+/* ➡ Componente que se encarga de renderizar el header del stack tanto del formulario de login como el del formulario de registro. */
 export default function Header ({ txtFormType }) {
   return (
     <ImageBackground

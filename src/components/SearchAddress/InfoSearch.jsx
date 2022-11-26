@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, ScrollView } from 'react-native'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 import Place from '../AddNewFavoritePlace/Place'
 
+/* ➡ Componente que se encarga de renderizar el mensaje y las coincidencias de los lugares que el usuario va digitando en el apartado de buscar dirección. */
 export default function InfoSearch ({ valueInput, places }) {
   return (
     <>

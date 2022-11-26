@@ -7,6 +7,7 @@ import { useDispatch } from 'react-redux'
 import { changeUserLoggedIn, changeNewUserLoggedIn } from '../../redux/UserLoggedInSliceReducer'
 import UseGetUsers from '../../hooks/UseGetUsers'
 
+/* ➡ Componente que se encarga de renderizar los botones de login y sigIn de la aplicación con sus respectivas funcionalidades. */
 export default function ButtonsLogin ({ isLoginButton, handleSubmit, txtButton, fieldsResetForm, handleShowAlert, navigation }) {
   const { users } = UseGetUsers()
   const auth = getAuth()

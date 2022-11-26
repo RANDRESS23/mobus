@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { StyleSheet } from 'react-native'
-import MapView, { Marker, Polyline } from 'react-native-maps' // eslint-disable-line
+import MapView from 'react-native-maps'
 
+/* ➡ Componente que se encarga de renderizar el mapa de una de las tres principales secciones que es la de ubicación, que esta tendrá sus funcionalidades completas próximamente. */
 export default function MapLocateUser () {
   const [origin, setOrigin] = useState({ // eslint-disable-line
     latitude: 4.462328,

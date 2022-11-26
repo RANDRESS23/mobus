@@ -6,6 +6,7 @@ import BusetasFavoritas from '../BusetasScreen/BusetasFavoritas'
 
 const Tab = createMaterialTopTabNavigator()
 
+/* ➡ Componente que se encarga de administrar la navegación entra el apartado de busetas municipales y el apartado de busetas veredales en el stack de buscar buseta. */
 export default function NavigationBusetas () {
   return (
     <Tab.Navigator

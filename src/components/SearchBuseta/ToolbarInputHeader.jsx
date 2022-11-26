@@ -3,6 +3,7 @@ import { StyleSheet, View, TextInput, TouchableOpacity } from 'react-native'
 import { MaterialCommunityIcons, Feather } from '@expo/vector-icons'
 import Constants from 'expo-constants'
 
+/* ➡ Componente que se encarga de renderizar la toolbar del apartado de buscar buseta. */
 export default function ToolbarInputHeader ({ navigation, valueInput, setValueInput }) {
   const [isActiveXIcon, setIsActiveXIcon] = useState(false)
 

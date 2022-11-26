@@ -12,6 +12,7 @@ const ICONS_FORM = {
   passwordConfirmed: 'lock'
 }
 
+/* ➡ Componente que se encarga de renderizar el input que se adecue al formulario de login o al formulario de registro. */
 export default function FieldForm ({ control, placeholder, isPasswordField, nameField, errors }) {
   return (
     <>

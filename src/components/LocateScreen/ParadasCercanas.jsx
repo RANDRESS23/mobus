@@ -2,6 +2,7 @@ import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { Feather } from '@expo/vector-icons'
 
+/* ➡ Componente que se encarga de renderizar el apartado de paradas cercanas en una de las tres principales secciones que es la de ubicación. */
 export default function ParadasCercanas () {
   return (
     <View style={styles.infoSearchContainer}>

@@ -2,6 +2,7 @@ import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 
+/* ➡ Componente que se encarga de renderizar la tabBar de recientes en el stack de agregar un lugar favorito. */
 export default function TabBarRecientes () {
   return (
     <View style={styles.tabBarSectionsContainer}>

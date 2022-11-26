@@ -14,6 +14,7 @@ const COLORS = {
   }
 }
 
+/* ➡ Componente que se encarga de renderizar las busetas favoritas tanto municipales como veredales. */
 export default function BusetasFavCardsContainer ({ navigation }) {
   const stateUserLoggedIn = useSelector((state) => state.userLoggedIn.userInfo)
   const { rutasFav } = stateUserLoggedIn

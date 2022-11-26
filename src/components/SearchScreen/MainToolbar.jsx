@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, TextInput } from 'react-native'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 import Constants from 'expo-constants'
 
+/* ➡ Componente que se encarga de renderizar la toolbar principal que se encuentra en el stack de buscar dirección y agregar direcciones favoritas. */
 export default function MainToolbar ({
   navigation, isFirstToolbar, placeholderInput = '', navigationTo = ''
 }) {

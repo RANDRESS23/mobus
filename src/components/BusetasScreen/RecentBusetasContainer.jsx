@@ -16,6 +16,7 @@ const COLORS = {
   }
 }
 
+/* ➡ Componente que se encarga de renderizar las rutas recientes que halla selecionado el usuario en el tiempo que ha estado navegando en la aplicación. */
 export default function RecentBusetasContainer (
   { navigation, rutasRecents, setRutasRecents, rutaSelected, setRutaSelected, isViewResetHistory, setIsViewResetHistory, setLoading }) {
   const [rutasMunicipales, setRutasMunicipales] = useState([])

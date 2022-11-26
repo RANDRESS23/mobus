@@ -5,6 +5,7 @@ import { MaterialCommunityIcons, Ionicons } from '@expo/vector-icons'
 import ItemBusetas from '../BusetasScreen/ItemBusetas'
 import Constants from 'expo-constants'
 
+/* ➡ Componente que se encarga de renderizar la toolbar en el stack de la información de cada buseta. */
 export default function ToolbarBusetaInfo (
   { ruta, navigation, hrefTo, isEnabled = null, setIsEnabled = null, principalColors }) {
   const [isViewChangeTheme, setIsViewChangeTheme] = useState(false)

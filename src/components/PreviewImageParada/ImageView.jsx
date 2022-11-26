@@ -3,6 +3,7 @@ import { StyleSheet, Text, TouchableOpacity, View, Image, Linking } from 'react-
 import AwesomeAlert from 'react-native-awesome-alerts'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 
+/* ➡ Componente que se encarga de renderizar la imagen de cada parada de su respectiva ruta. */
 export default function ImageView ({ url, indexImg, nameParada }) {
   const [showAlert, setShowAlert] = useState(false)
 

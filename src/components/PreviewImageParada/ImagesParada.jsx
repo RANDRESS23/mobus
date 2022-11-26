@@ -3,6 +3,7 @@ import { StyleSheet, ScrollView, View, Text, Image } from 'react-native'
 import ImageView from './ImageView'
 import iconParada from '../../../assets/img/parada_de_autobus.png'
 
+/* ➡ Componente que se encarga de renderizar las imagenes que muestra una vista alrededor de cada parada de las respectivas rutas que contiene la aplicación. */
 export default function ImagesParada ({ nameParada, imgsParada }) {
   return (
     <ScrollView style={styles.imagesParadaContainer}>

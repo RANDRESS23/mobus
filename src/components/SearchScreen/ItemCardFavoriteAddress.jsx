@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 import AlertSimple from '../LoginUser/AlertSimple'
 
+/* ➡ Componente que se encarga de renderizar cada lugar favorito que valla agregando el usuario en la busqueda en el stack de buscar dirección y agregar direcciones favoritas. */
 export default function ItemCardFavoriteAddress ({ nameIcon, nameAddress }) {
   const [showAlert, setShowAlert] = useState(false)
 

@@ -1,9 +1,9 @@
 import { StyleSheet, View, TouchableOpacity } from 'react-native'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
-
 import ItemBusetas from '../BusetasScreen/ItemBusetas'
 import Constants from 'expo-constants'
 
+/* ➡ Componente que se encarga de renderizar la toolbar del stack de la previsualización de imagenes de cada parada de las respectivas rutas que se encuentran en la aplicación. */
 export default function ToolbarParadaImage (
   { infoBuseta, navigation, hrefTo, principalColors }) {
   const { primaryColor } = principalColors

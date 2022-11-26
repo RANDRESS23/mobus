@@ -7,6 +7,7 @@ import BusetasFavoritas from './BusetasFavoritas'
 
 const Tab = createMaterialTopTabNavigator()
 
+/* ➡ Componente que se encarga de renderizar la navegación entra el apartado de rutas municipales y veredales, con el apartado de rutas favoritas. */
 export default function NavigationScreens () {
   return (
     <Tab.Navigator

@@ -2,6 +2,7 @@ import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 
+/* ➡ Componente que se encarga de renderizar el icono de buseta con el número y el nombre de la ruta que aparace en la toolbar de cada stack de cada ruta con su información. */
 export default function ItemBusetas ({ nameRuta, numRuta, principalColors }) {
   return (
     <View style={styles.rutaInfoContainer}>

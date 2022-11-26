@@ -3,6 +3,7 @@ import { StyleSheet } from 'react-native'
 import MapView, { Marker, Polyline, PROVIDER_GOOGLE } from 'react-native-maps'
 import imgParadaBus from '../../../assets/img/parada_de_autobus.png'
 
+/* ➡ Componente que se encarga de renderizar el mapa con su respectivo recorrido de cada ruta en el stack de la información de cada buseta. */
 export default function MapParadasRuta (
   { infoBuseta, markedFocused, setMarkedFocused, isEnabled, principalColors }) {
   const { paradasRuta, polylineCoordinates } = infoBuseta

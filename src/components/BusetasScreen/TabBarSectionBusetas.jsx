@@ -2,6 +2,7 @@ import React from 'react'
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 
+/* ➡ Componente que se encarga de renderizar la tabBar de la sección de rutas recientes. */
 export default function TabBarSectionBusetas (
   { sectionTitle, isRecentSectionTab, setIsViewResetHistory }) {
   return (

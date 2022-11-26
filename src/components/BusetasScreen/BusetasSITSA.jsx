@@ -6,6 +6,7 @@ import ResetHistory from './ResetHistory'
 import TabBarSectionBusetas from './TabBarSectionBusetas'
 import Spinner from 'react-native-loading-spinner-overlay'
 
+/* ➡ Componente que se encarga de renderizar solo la parte de las busetas en general, municipales y veredales, no renderizará las rutas favoritas. */
 export default function BusetasSITSA ({ navigation }) {
   const [rutaSelected, setRutaSelected] = useState({})
   const [rutasRecents, setRutasRecents] = useState([])
