@@ -5,6 +5,7 @@ import CustomDrawer from './drawerComponents/CustomDrawer'
 
 const Drawer = createDrawerNavigator()
 
+/* ➡ Método que se encargará de retornar el drawer de la aplicación. */
 export default function MyDrawer () {
   return (
     <Drawer.Navigator

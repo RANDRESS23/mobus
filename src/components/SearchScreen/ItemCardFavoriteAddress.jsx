@@ -1,19 +1,38 @@
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import React, { useState } from 'react'
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
+import AlertSimple from '../LoginUser/AlertSimple'
 
 export default function ItemCardFavoriteAddress ({ nameIcon, nameAddress }) {
+  const [showAlert, setShowAlert] = useState(false)
+
+  const handleShowAlert = () => {
+    setShowAlert(prevShowAlert => !prevShowAlert)
+  }
+
   return (
-    <View style={styles.itemCardContainer}>
-      <View style={styles.itemInfoContainer}>
-        <MaterialCommunityIcons name={nameIcon} style={styles.imgIconCard} />
-        <View style={styles.textsContainer}>
-          <Text style={styles.textNameAddress}>{nameAddress}</Text>
-          <Text style={styles.textEditar}>Pulsa para editar</Text>
+    <>
+      <AlertSimple
+        show={showAlert}
+        title='➡ ¡PRÓXIMAMENTE! ➡'
+        titleStyle={{ fontWeight: 'bold' }}
+        message='¡Este apartado estará disponible próximamente!'
+        cancelText='OK'
+        onCancelPressed={handleShowAlert}
+      />
+      <TouchableOpacity onPress={handleShowAlert}>
+        <View style={styles.itemCardContainer}>
+          <View style={styles.itemInfoContainer}>
+            <MaterialCommunityIcons name={nameIcon} style={styles.imgIconCard} />
+            <View style={styles.textsContainer}>
+              <Text style={styles.textNameAddress}>{nameAddress}</Text>
+              <Text style={styles.textEditar}>Pulsa para editar</Text>
+            </View>
+          </View>
+          <MaterialCommunityIcons name='chevron-right' style={styles.imgIconCard} />
         </View>
-      </View>
-      <MaterialCommunityIcons name='chevron-right' style={styles.imgIconCard} />
-    </View>
+      </TouchableOpacity>
+    </>
   )
 }
 

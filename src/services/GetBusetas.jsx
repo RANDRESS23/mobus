@@ -1,10 +1,12 @@
 import { database } from './database/Firebase'
 import { collection, onSnapshot, query } from 'firebase/firestore'
 
+/* ➡ Método que se encargará de obtener las busetas guardadas en la BD de Firebase. */
 export default function GetBusetas ({ firebaseKeyCollection, setRutas, setLoading, isRecentBusetas }) {
   const collectionRef = collection(database, firebaseKeyCollection)
   const q = query(collectionRef)
-  // FALTA CORREGIR EL LOADING DE LAS RUTAS
+
+  /* ➡ Se recorre el resultado obtenido (rutas municipales o veredales) de la BD (arreglo de objetos) y se van guardando en una variable de estado, que es otro arreglo de objetos, dichos resultados (busetas). */
   const unsuscribe = onSnapshot(q, querySnapshot => {
     setLoading(true)
 

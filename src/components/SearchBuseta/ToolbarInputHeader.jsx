@@ -3,9 +3,8 @@ import { StyleSheet, View, TextInput, TouchableOpacity } from 'react-native'
 import { MaterialCommunityIcons, Feather } from '@expo/vector-icons'
 import Constants from 'expo-constants'
 
-export default function ToolbarInputHeader ({ navigation }) {
+export default function ToolbarInputHeader ({ navigation, valueInput, setValueInput }) {
   const [isActiveXIcon, setIsActiveXIcon] = useState(false)
-  const [valueInput, setValueInput] = useState('')
 
   const renderXIcon = () => setIsActiveXIcon(true)
   const notRenderXIcon = () => setIsActiveXIcon(false)

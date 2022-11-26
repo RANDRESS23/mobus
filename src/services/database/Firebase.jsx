@@ -3,6 +3,7 @@ import { getFirestore } from 'firebase/firestore'
 import { getStorage } from 'firebase/storage'
 import Constants from 'expo-constants'
 
+/* ➡ Se realiza las respectivas asignaciones de las Api - Keys para que Firebase nos de el visto bueno para poder empezar a usar sus funcionalidades. */
 const firebaseConfig = {
   apiKey: Constants.manifest.extra.apiKey,
   authDomain: Constants.manifest.extra.authDomain,
@@ -16,15 +17,3 @@ initializeApp(firebaseConfig)
 
 export const database = getFirestore()
 export const storage = getStorage()
-/*
-rule-fiberase:
-rules_version = '2';
-service cloud.firestore {
-  match /databases/{database}/documents {
-    match /{document=**} {
-      allow read, write: if
-        request.time < timestamp.date(2022, 6, 7);
-    }
-  }
-}
-*/

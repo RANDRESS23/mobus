@@ -10,6 +10,7 @@ import { changeUserLogOut } from '../../redux/UserLoggedInSliceReducer'
 import UseGetUsers from '../../hooks/UseGetUsers'
 import AwesomeAlert from 'react-native-awesome-alerts'
 
+/* ➡ Componente que se encarga de renderizar el stack donde el usuario va a poder realizar busquedas de direcciones y agregar lugares a favoritos para así tener un acceso más rápido. */
 export default function SearchScreen ({ navigation }) {
   const [showAlert, setShowAlert] = useState(false)
   const { users } = UseGetUsers()

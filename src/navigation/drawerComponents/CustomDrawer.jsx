@@ -3,9 +3,9 @@ import { StyleSheet, View } from 'react-native'
 import { DrawerContentScrollView } from '@react-navigation/drawer'
 import ItemList from './ItemList'
 import HeaderDrawer from './HeaderDrawer'
-import TeamMembers from './TeamMembers'
 import SignOut from './SignOut'
 
+/* ➡ Método que se encargará de retornar el drawer customatizado de la aplicación. */
 export default function CustomDrawer (props) {
   return (
     <View style={styles.drawerContainer}>
@@ -55,7 +55,6 @@ export default function CustomDrawer (props) {
         <View style={styles.signOutContainer}>
           <SignOut navigation={props.navigation} />
         </View>
-        {/* <TeamMembers /> */}
       </DrawerContentScrollView>
     </View>
   )

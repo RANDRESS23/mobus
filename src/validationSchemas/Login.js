@@ -1,5 +1,7 @@
 import * as yup from 'yup'
 
+/* ➡ Se crea el Schema de las validaciones para todos los campos del formulario de login. */
+
 const PASSWORD_EXPRESION = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,15}/
 
 const loginSchema = yup.object({

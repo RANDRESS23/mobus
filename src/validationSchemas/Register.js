@@ -1,5 +1,7 @@
 import * as yup from 'yup'
 
+/* ➡ Se crea el Schema de las validaciones para todos los campos del formulario de registro. */
+
 const PASSWORD_EXPRESION = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,15}/
 const USERNAME_EXPRESION = /^(?=[a-zA-Z0-9._]{4,10}$)(?!.*[_.]{2})[^_.].*[^_.]$/
 const NAME_EXPRESSION = /^[a-z ,.'-]+$/i

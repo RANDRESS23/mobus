@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, ImageBackground, Image } from 'react-native'
 import { FontAwesome } from '@expo/vector-icons'
 import UseUserLoggedIn from '../../hooks/UseUserLoggedIn'
 
+/* ➡ Método que se encargará de retornar la cabecera del drawer de la aplicación. */
 export default function HeaderDrawer () {
   const { userLoggedIn } = UseUserLoggedIn()
 

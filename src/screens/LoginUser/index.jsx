@@ -6,6 +6,7 @@ import FormLogin from '../../components/LoginUser/FormLogin'
 import LineSeparator from '../../components/LoginUser/LineSeparator'
 import ButtonsLogin from '../../components/LoginUser/ButtonsLogin'
 
+/* ➡ Componente que se encarga de renderizar el stack del formulario de login. */
 export default function LoginUser ({ navigation }) {
   return (
     <View style={styles.loginContainer}>

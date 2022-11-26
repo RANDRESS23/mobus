@@ -1,94 +1,112 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { StyleSheet, Text, View, ScrollView, TouchableOpacity } from 'react-native'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
+import AlertSimple from '../LoginUser/AlertSimple'
 
 export default function ParadasBuseta (
   { infoBuseta, navigation, setMarkedFocused, markedFocused, principalColors }) {
   const { paradasRuta } = infoBuseta
+  const [showAlert, setShowAlert] = useState(false)
+
+  const handleShowAlert = () => {
+    setShowAlert(prevShowAlert => !prevShowAlert)
+  }
 
   return (
-    <ScrollView style={styles.paradasContainer}>
-      {
-        paradasRuta.map((parada, index) => {
-          const { nameParada, numParada, horariosParada } = parada
+    <>
+      <AlertSimple
+        show={showAlert}
+        title='➡ ¡PRÓXIMAMENTE! ➡'
+        titleStyle={{ fontWeight: 'bold' }}
+        message='¡Este apartado estará disponible próximamente!'
+        cancelText='OK'
+        onCancelPressed={handleShowAlert}
+      />
+      <ScrollView style={styles.paradasContainer}>
+        {
+          paradasRuta.map((parada, index) => {
+            const { nameParada, numParada, horariosParada } = parada
 
-          return (
-            <TouchableOpacity
-              key={numParada}
-              onPress={() => setMarkedFocused(numParada)}
-              style={styles.touchableStyle}
-            >
-              <View>
-                {
-                  markedFocused === numParada || index + 1 === markedFocused
-                    ? (
-                      <MaterialCommunityIcons
-                        name='diamond'
-                        style={{
-                          ...styles.icons,
-                          color: principalColors.primaryColor
-                        }}
-                      />
-                      )
-                    : (
-                      <MaterialCommunityIcons
-                        name='diamond-outline'
-                        style={{
-                          ...styles.icons,
-                          color: principalColors.primaryColor
-                        }}
-                      />
-                      )
-                }
-              </View>
-              <View style={styles.paradaContent}>
-                <View style={styles.nameAndHorarioContainer}>
-                  <Text style={styles.nameParadaStyle}>{nameParada}</Text>
+            return (
+              <TouchableOpacity
+                key={numParada}
+                onPress={() => setMarkedFocused(numParada)}
+                style={styles.touchableStyle}
+              >
+                <View>
                   {
                     markedFocused === numParada || index + 1 === markedFocused
                       ? (
-                        <View style={styles.horariosContainer}>
-                          <Text style={styles.mainParada}>{horariosParada[0]}</Text>
-                          {
-                            horariosParada.length > 1
-                              ? <Text style={styles.secondaryParada}>{horariosParada[1]}</Text>
-                              : null
-                          }
-                        </View>
+                        <MaterialCommunityIcons
+                          name='diamond'
+                          style={{
+                            ...styles.icons,
+                            color: principalColors.primaryColor
+                          }}
+                        />
                         )
-                      : <MaterialCommunityIcons name='chevron-right' style={styles.arrowRightIcon} />
+                      : (
+                        <MaterialCommunityIcons
+                          name='diamond-outline'
+                          style={{
+                            ...styles.icons,
+                            color: principalColors.primaryColor
+                          }}
+                        />
+                        )
                   }
                 </View>
-                {
-                  markedFocused === numParada || index + 1 === markedFocused
-                    ? (
-                      <View style={styles.linksContainer}>
-                        <Text style={styles.txtDetallesParada}>
-                          Detalles de la parada
-                        </Text>
-                        <TouchableOpacity
-                          onPress={() =>
-                            navigation.navigate('HorarioCompleto', {
-                              horariosParada,
-                              nameParada,
-                              infoBuseta,
-                              principalColors
-                            })}
-                        >
-                          <Text style={styles.txtHorarioCompleto}>
-                            Horario completo
-                          </Text>
-                        </TouchableOpacity>
-                      </View>
-                      )
-                    : <View />
-                }
-              </View>
-            </TouchableOpacity>
-          )
-        })
-      }
-    </ScrollView>
+                <View style={styles.paradaContent}>
+                  <View style={styles.nameAndHorarioContainer}>
+                    <Text style={styles.nameParadaStyle}>{nameParada}</Text>
+                    {
+                      markedFocused === numParada || index + 1 === markedFocused
+                        ? (
+                          <View style={styles.horariosContainer}>
+                            <Text style={styles.mainParada}>{horariosParada[0]}</Text>
+                            {
+                              horariosParada.length > 1
+                                ? <Text style={styles.secondaryParada}>{horariosParada[1]}</Text>
+                                : null
+                            }
+                          </View>
+                          )
+                        : <MaterialCommunityIcons name='chevron-right' style={styles.arrowRightIcon} />
+                    }
+                  </View>
+                  {
+                    markedFocused === numParada || index + 1 === markedFocused
+                      ? (
+                        <View style={styles.linksContainer}>
+                          <TouchableOpacity onPress={handleShowAlert}>
+                            <Text style={styles.txtDetallesParada}>
+                              Detalles de la parada
+                            </Text>
+                          </TouchableOpacity>
+                          <TouchableOpacity
+                            onPress={() =>
+                              navigation.navigate('HorarioCompleto', {
+                                horariosParada,
+                                nameParada,
+                                infoBuseta,
+                                principalColors
+                              })}
+                          >
+                            <Text style={styles.txtHorarioCompleto}>
+                              Horario completo
+                            </Text>
+                          </TouchableOpacity>
+                        </View>
+                        )
+                      : <View />
+                  }
+                </View>
+              </TouchableOpacity>
+            )
+          })
+        }
+      </ScrollView>
+    </>
   )
 }
 

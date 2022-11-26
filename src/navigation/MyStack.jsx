@@ -15,6 +15,7 @@ import RegisterUser from '../screens/RegisterUser'
 
 const Stack = createStackNavigator()
 
+/* ➡ Método que se encargará de retornar todas las pantallas (stacks) que tiene la aplicación. */
 export default function MyStack () {
   return (
     <Stack.Navigator

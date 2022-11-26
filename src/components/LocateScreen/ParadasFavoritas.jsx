@@ -1,22 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { StyleSheet, Text, View, ScrollView } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
+import AlertSimple from '../LoginUser/AlertSimple'
 
 export default function ParadasFavoritas () {
+  const [showAlert, setShowAlert] = useState(false)
+
+  const handleShowAlert = () => {
+    setShowAlert(prevShowAlert => !prevShowAlert)
+  }
+
   return (
-    <ScrollView>
-      <View style={styles.favoritosInfoContainer}>
-        <MaterialCommunityIcons name='star' style={styles.startIcon} />
-        <Text style={styles.textInfoFavoritos}>Agrega una parada a "Paradas favoritas" para tener un rápido acceso e información instantánea</Text>
-        <TouchableOpacity
-          onPress={() => console.log('xd')}
-          style={styles.buttonEnseñame}
-        >
-          <Text style={styles.textButtonEnseñame}>Enséñame</Text>
-        </TouchableOpacity>
-      </View>
-    </ScrollView>
+    <>
+      <AlertSimple
+        show={showAlert}
+        title='➡ ¡PRÓXIMAMENTE! ➡'
+        titleStyle={{ fontWeight: 'bold' }}
+        message='¡Este apartado estará disponible próximamente!'
+        cancelText='OK'
+        onCancelPressed={handleShowAlert}
+      />
+      <ScrollView>
+        <View style={styles.favoritosInfoContainer}>
+          <MaterialCommunityIcons name='star' style={styles.startIcon} />
+          <Text style={styles.textInfoFavoritos}>Agrega una parada a "Paradas favoritas" para tener un rápido acceso e información instantánea</Text>
+          <TouchableOpacity onPress={handleShowAlert} style={styles.buttonEnseñame}>
+            <Text style={styles.textButtonEnseñame}>Enséñame</Text>
+          </TouchableOpacity>
+        </View>
+      </ScrollView>
+    </>
   )
 }
 

@@ -6,6 +6,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import UseGetUsers from '../../hooks/UseGetUsers'
 import AwesomeAlert from 'react-native-awesome-alerts'
 
+/* ➡ Método que se encargará de retornar el boton de cerrar sesión que se encuentra dentro del drawer de la aplicación. */
 export default function SignOut ({ navigation }) {
   const [showAlert, setShowAlert] = useState(false)
   const stateUserLoggedIn = useSelector((state) => state.userLoggedIn.userInfo)

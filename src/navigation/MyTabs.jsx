@@ -9,6 +9,7 @@ import BusetasScreen from '../screens/BusetasScreen'
 
 const Tab = createBottomTabNavigator()
 
+/* ➡ Método que se encargará de retornar las respectivas tabs principales de la aplicación. */
 export default function MyTabs () {
   return (
     <Tab.Navigator

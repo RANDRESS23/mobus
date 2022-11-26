@@ -18,11 +18,16 @@ export default function BottomOptions ({ navigation, infoBuseta, markedFocused, 
   const stateUserLoggedIn = useSelector((state) => state.userLoggedIn.userInfo)
   const [isRutaFav, setIsRutaFav] = useState(false)
   const [showAlert, setShowAlert] = useState(false)
+  const [showAlert2, setShowAlert2] = useState(false)
   const { users } = UseGetUsers()
   const dispatch = useDispatch()
 
   const handleShowAlert = () => {
     setShowAlert(prevShowAlert => !prevShowAlert)
+  }
+
+  const handleShowAlert2 = () => {
+    setShowAlert2(prevShowAlert => !prevShowAlert)
   }
 
   const handleNewRutaFav = () => {
@@ -81,6 +86,14 @@ export default function BottomOptions ({ navigation, infoBuseta, markedFocused, 
         cancelText='ENTENDIDO'
         onCancelPressed={handleShowAlert}
       />
+      <AlertSimple
+        show={showAlert2}
+        title='➡ ¡PRÓXIMAMENTE! ➡'
+        titleStyle={{ fontWeight: 'bold' }}
+        message='¡Esta acción estará disponible próximamente!'
+        cancelText='OK'
+        onCancelPressed={handleShowAlert2}
+      />
       <View style={styles.bottomOptionsContainer}>
         <View style={styles.bottomOptions}>
           <View style={styles.bottomOption}>
@@ -99,7 +112,7 @@ export default function BottomOptions ({ navigation, infoBuseta, markedFocused, 
             </TouchableOpacity>
           </View>
           <View style={styles.bottomOption}>
-            <TouchableOpacity style={styles.buttonOption}>
+            <TouchableOpacity style={styles.buttonOption} onPress={handleShowAlert2}>
               <MaterialIcons name='report' style={styles.iconOptionBottom} />
               <Text style={styles.txtOptionBottom}>Reportar</Text>
             </TouchableOpacity>

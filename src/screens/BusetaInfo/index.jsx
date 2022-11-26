@@ -6,12 +6,12 @@ import MapParadasRuta from '../../components/BusetaInfo/MapParadasRuta'
 import ParadasBuseta from '../../components/BusetaInfo/ParadasBuseta'
 import ToolbarBusetaInfo from '../../components/BusetaInfo/ToolbarBusetaInfo'
 
+/* ➡ Componente que se encarga de renderizar el stack de información de la buseta. */
 export default function BusetaInfo ({ navigation }) {
   const [markedFocused, setMarkedFocused] = useState(1)
   const [isEnabled, setIsEnabled] = useState(false)
   const { ruta, principalColors } = navigation.getState().routes[2].params || navigation.getState().routes[3].params
 
-  /* Returning a view with all the components inside. */
   return (
     <View style={styles.busetaInfoContainer}>
       <ToolbarBusetaInfo

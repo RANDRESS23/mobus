@@ -1,10 +1,12 @@
 import { database } from './database/Firebase'
 import { collection, onSnapshot, query } from 'firebase/firestore'
 
+/* ➡ Método que se encargará de obtener los usuarios registrados en la BD de Firebase. */
 export default function GetUsers ({ setUsers }) {
   const collectionRef = collection(database, 'usersMoBus')
   const q = query(collectionRef)
 
+  /* ➡ Se recorre el resultado obtenido de la BD (arreglo de objetos) y se van guardando en una variable de estado, que es otro arreglo de objetos, dichos resultados (usuarios). */
   const unsuscribe = onSnapshot(q, querySnapshot => {
     setUsers(
       querySnapshot.docs.map((doc) => {

@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, ScrollView } from 'react-native'
 import ToolbarBusetaInfo from '../../components/BusetaInfo/ToolbarBusetaInfo'
 import HeaderSectionHorarioCompleto from '../../components/HorarioCompleto/HeaderSectionHorarioCompleto'
 
+/* ➡ Componente que se encarga de renderizar el stack del horario completo de cada buseta. */
 export default function HorarioCompleto ({ navigation }) {
   let { horariosParada, nameParada, infoBuseta, principalColors } = navigation.getState().routes[3].params
 

@@ -4,6 +4,7 @@ import Constants from 'expo-constants'
 import Header from '../../components/LoginUser/Header'
 import FormRegister from '../../components/RegisterUser/FormRegister'
 
+/* ➡ Componente que se encarga de renderizar el stack del formulario de registro. */
 export default function RegisterUser ({ navigation }) {
   return (
     <View style={styles.registerContainer}>

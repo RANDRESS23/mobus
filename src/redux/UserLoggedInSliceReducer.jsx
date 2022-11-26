@@ -7,6 +7,7 @@ const ACTIONS_RUTA_FAV = {
   DELETE_RUTA_FAV: 'DeleteFavRuta'
 }
 
+/* ➡ Configurando el slice del reducer de redux para tener la información del usuario en el store de la aplicación. */
 export const UserLoggedInSliceReducer = createSlice({
   name: 'user',
   initialState: { userInfo: {} },

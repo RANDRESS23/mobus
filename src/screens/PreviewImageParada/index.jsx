@@ -2,6 +2,7 @@ import { StyleSheet, View } from 'react-native'
 import ImagesParada from '../../components/PreviewImageParada/ImagesParada'
 import ToolbarParadaImage from '../../components/PreviewImageParada/ToolbarParadaImage'
 
+/* ➡ Componente que se encarga de renderizar el stack de la previsualización de las imagenes de cada parada para su respectiva ruta. */
 export default function PreviewImageParada ({ navigation }) {
   let { infoBuseta, imgsParada, nameParada, principalColors } = navigation.getState().routes[3].params
 
