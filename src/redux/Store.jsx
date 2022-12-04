@@ -5,5 +5,9 @@ import UserReducer from './UserLoggedInSliceReducer'
 export const store = configureStore({
   reducer: {
     userLoggedIn: UserReducer
-  }
+  },
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware({
+    immutableCheck: false,
+    serializableCheck: false
+  })
 })
