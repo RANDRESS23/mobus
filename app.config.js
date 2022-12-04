@@ -26,7 +26,7 @@ export default {
     "android": {
       "package": 'com.randress.mobus',
       "adaptiveIcon": {
-        "foregroundImage": './assets/img/adaptive-icon.png',
+        "foregroundImage": './assets/img/logoMobus.png',
         "backgroundColor": '#7900AC'
       },
       "versionCode": 1
@@ -41,7 +41,10 @@ export default {
       "storageBucket": process.env.STORAGE_BUCKET,
       "messagingSenderId": process.env.MESSAGING_SENDER_ID,
       "appId": process.env.APP_ID,
-      "apiKeyMyMappi": process.env.MYMAPPI_API_KEY
+      "apiKeyMyMappi": process.env.MYMAPPI_API_KEY,
+      "eas": {
+        "projectId": process.env.PROJECT_ID_BUILD
+      }
     }
   }
 }
