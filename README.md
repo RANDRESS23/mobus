@@ -1,11 +1,14 @@
-# DESARROLLO DE UN APLICATIVO MOVIL “MOBUS” PARA LA VISUALIZACIÓN SOBRE LA INFORMACIÓN DE DIFERENTES RUTAS DEL SISTEMA DE BUSES “SITSA” DE IBAGUE – TOLIMA.
+## Desarrollo de un aplicativo movil “Mobus” para la visualización sobre la información de diferentes rutas del sistema de buses “sitsa” de Ibague – Tolima.
 
-## APLICATIVO MÓVIL
+## Aplicativo Móvil
 
+### SplashScreen
 ![splashScreen](https://i.postimg.cc/8CqD8MVW/1.png)
 
+### Login
 ![login](https://i.postimg.cc/T31XpCdg/Whats-App-Image-2022-11-22-at-11-17-41-PM-1.jpg)
 
+### SignUp
 ![signup](https://i.postimg.cc/66VKS8b2/Whats-App-Image-2022-11-22-at-11-17-41-PM-2.jpg)
 
 ![ventanaPrincipal1](https://i.postimg.cc/tJbjJbJ4/2.png)
